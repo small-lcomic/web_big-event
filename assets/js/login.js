@@ -22,7 +22,7 @@ $(function () {
             /^[\S]{6,12}$/
             , '密码必须6到12位,且不能输入空格'
         ],
-        //校验量词密码是否一致的规则--注册表单
+        //校验两次密码是否一致的规则--注册表单
         repwd: function (value) {
             //value是输入的值
 
@@ -84,8 +84,6 @@ $(function () {
                 if (res.status !== 0) {
                     return layer.msg(res.message);
                 }
-                //提交成功后处理代码
-                layer.msg("登录成功");
                 
                 //提示信息,保存token,跳转页面
                 layer.msg('恭喜您,登录成功!')
